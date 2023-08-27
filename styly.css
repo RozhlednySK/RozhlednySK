@@ -42,10 +42,10 @@
                
                /*FFFF99 = béžová */
                #Hlavni{width:100%; float:left; background-color:#FFFF99;}
-               #Navigace{margin:0; padding:0; float:left; background-color:#FFFF99;margin-left:8px; margin-top:20px; }
+               #Navigace{margin:0; padding:0; float:left; background-color:#FFFF99;margin-left:8px;}
                                                       
                     /*        ladìní: snížení margin-top z pùvodních 42px* z Navig-ul vyndáno margin-left:15 px; */
-    #Navigace ul{ margin:0; padding:0; list-style-type:none;  margin-top:20px}
+    #Navigace ul{ margin:0; padding:0; list-style-type:none;  margin-top:0}
     
     /* width udává šíøku rámeèku, FFCC66 je okrová pro lištu */
 #Navigace li {	margin: 0;     	padding: 0;    	padding-left: 10px;        	margin-left: 20px;    	background-color: #FFCC66;   	border: solid black;   	border-width: 1px 1px 0px 1px;      	padding: 6px 0px 5px 6px;    	font-family: "Arial";   	text-align: left;              	width: 216px;       }
@@ -112,10 +112,40 @@
  
  strong {font-size:98%}
  
-  .prvni {text-align:center}
+  .prvni {
+  display: flex;
+  justify-content: center; /* Zarovnání na střed */ 
+}
+
+.prvni img {
+  flex-shrink: 0;
+width: 120px;
+  height: auto;
+}
+
+/* Upravit styly pro mobilní zařízení */
+@media (max-width: 600px) {
+  .prvni {
+    justify-content: flex-start; /* Zarovnání doleva */
+    overflow-x: auto;
+  }
+.prvni img {
+  margin-left:10px 
+}
+ } 
   .odsadit {margin-left:5px}
   .odsadit2 {margin-left:15px}
   .posledni {margin-right:12px}
+
+.dole {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 20px;
+	}
+
+
                                  /*
   @media screen and (max-width: 768px) { #Obal {width: 760px;}    
                                          #Obal-kraj {width: 760px;}    
